@@ -1,14 +1,80 @@
-<mvc:View
-    controllerName="dexco.ui5products.controller.App"
-    xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true"
-    xmlns="sap.m"
->
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="dexco.ui5products.controller.App" displayBlock="true">
 	<Shell id="shell">
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-					<content />
+					<content>
+                        <Table noDataText="{i18n>noProductsFound}}" items="{/Products}">
+                            <items>
+                                <ColumnListItem type="Active">
+                                    <cells>
+                                        <Text text="{ProductID}"/>
+                                        <Text text="{ProductName}"/>
+                                        <Text text="{SupplierID}"/>
+                                        <Text text="{CategoryID}"/>
+                                        <Text text="{QuantityPerUnit}"/>
+                                        <Text text="{UnitPrice}"/>
+                                        <Text text="{UnitsInStock}"/>
+                                        <Text text="{UnitsOnOrder}"/>
+                                        <Text text="{ReorderLevel}"/>
+                                        <Text text="{Discontinued}"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                            <columns>
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>lblProductID}"/>
+                                    </header>
+                                </Column>
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>lblProductName}"/>
+                                    </header>
+                                 </Column>
+                                 <Column>
+                                    <header>
+                                        <Label text="{i18n>lblSupplierID}"/>
+                                    </header>
+                                </Column>
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>lblCategoryID}"/>
+                                    </header>
+                                </Column>
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>lblQuantityPerUnit}"/>
+                                    </header>
+                                </Column>
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>lblUnitPrice}"/>
+                                    </header>
+                                </Column>
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>lblUnitsInStock}"/>
+                                    </header>
+                                </Column>
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>lblUnitsOnOrder}"/>
+                                    </header>
+                                </Column>
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>lblReorderLevel}"/>
+                                    </header>
+                                </Column>
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>lblDiscontinued}"/>
+                                    </header>
+                                </Column>
+                            </columns>
+                        </Table>
+                    </content>
 				</Page>
 			</pages>
 		</App>
