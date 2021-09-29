@@ -4,20 +4,20 @@
 			<pages>
 				<Page id="page" title="{i18n>title}">
 					<content>
-                        <Table noDataText="{i18n>noProductsFound}}" items="{/Products}">
+                        <Table noDataText="{i18n>noProductsFound}}" items="{Northwind>/Products}">
                             <items>
                                 <ColumnListItem type="Active">
                                     <cells>
-                                        <Text text="{ProductID}"/>
-                                        <Text text="{ProductName}"/>
-                                        <Text text="{SupplierID}"/>
-                                        <Text text="{CategoryID}"/>
-                                        <Text text="{QuantityPerUnit}"/>
-                                        <Text text="{UnitPrice}"/>
-                                        <Text text="{UnitsInStock}"/>
-                                        <Text text="{UnitsOnOrder}"/>
-                                        <Text text="{ReorderLevel}"/>
-                                        <Text text="{Discontinued}"/>
+                                        <Text text="{Northwind>ProductID}"/>
+                                        <Text text="{Northwind>ProductName}"/>
+                                        <Text text="{Northwind>SupplierID}"/>
+                                        <Text text="{Northwind>CategoryID}"/>
+                                        <Text text="{Northwind>QuantityPerUnit}"/>
+                                        <Text text="{Northwind>UnitPrice}"/>
+                                        <Text text="{Northwind>UnitsInStock}"/>
+                                        <Text text="{Northwind>UnitsOnOrder}"/>
+                                        <Text text="{Northwind>ReorderLevel}"/>
+                                        <Text text="{Northwind>Discontinued}"/>
                                     </cells>
                                 </ColumnListItem>
                             </items>
